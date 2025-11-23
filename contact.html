@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせ | りょうがのサイト</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    
+<header>
+    <h1>りょうがのサイト</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">僕に着いて</a></li>
+            <li><a href="services.html">サービス</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>お問い合わせ</h2>
+    <p>フォームまたはメールアドレスでお気軽にお問い合わせください！</p>
+    
+    <form action="send.php" method="POST">
+        
+        <div class="form-group">
+            <label for="name">お名前 (必須)</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">メールアドレス (必須)</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">メッセージ (必須)</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit">送信する</button>
+    </form>
+    
+    <p class="contact-email">
+        またはこちらに直接メール: <a href="mailto:ryouga0309ma@gmail.com">ryouga0309ma@gmail.com</a>
+    </p>
+</main>
+
+<footer>
+    <p>&copy; 2025 りょうがのサイト</p>
+</footer>
+
+</body>
+</html>

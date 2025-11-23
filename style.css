@@ -1,0 +1,146 @@
+body {
+    /* 落ち着いたエレガントなグレーを背景に */
+    background-color: #f7f7f7; 
+    color: #333333; 
+    /* フォントはセリフ体（明朝体）で知性と高級感を演出 */
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* 行間を広げて読みやすくスタイリッシュに */
+}
+
+/* アクセントカラーは、重厚感のある黒と、クールなゴールド/真鍮をイメージ */
+:root {
+    --accent-color: #a08c5c; /* クールなゴールド/真鍮色 */
+    --main-bg: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+/* ヘッダー: スタイリッシュな固定バー */
+header {
+    background-color: var(--main-bg); 
+    padding: 15px 80px;
+    border-bottom: 1px solid var(--border-color); /* 細い線で区切る */
+    margin-bottom: 60px; /* メインコンテンツとの間隔を大きく取る */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03); /* 控えめな影 */
+}
+
+/* タイトル: フォントサイズは大きすぎず、品良く */
+header h1 {
+    font-size: 1.8em;
+    color: #222222;
+    font-weight: 300; /* 細いフォントで繊細に */
+    letter-spacing: 2px;
+}
+
+/* ナビゲーション */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #666666; /* リンクは落ち着いた色 */
+    font-weight: 400;
+    font-size: 1.05em;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent; /* 最初は透明な下線 */
+}
+
+/* ホバーエフェクト: 下線と色がアクセントカラーに */
+nav a:hover {
+    color: var(--accent-color); /* ゴールド系に変化 */
+    border-bottom: 2px solid var(--accent-color); /* 下線が光る */
+}
+
+/* メインコンテンツエリア */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--main-bg);
+    /* 派手な影は使わず、エッジをシャープに */
+    border: 1px solid var(--border-color); 
+    min-height: 70vh; 
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+    color: #aaaaaa;
+    font-size: 0.85em;
+    /* 上側にだけ太めのグレーの線を入れる */
+    border-top: 5px double var(--border-color); 
+    letter-spacing: 1px;
+}
+
+/* ======================================= */
+/* フォーム全体（<form>タグ）のスタイリング */
+/* ======================================= */
+main form {
+    display: flex; /* 子要素（ラベルや入力欄）を縦に並べるためにFlexboxを使う */
+    flex-direction: column;
+    gap: 20px; /* 要素間のスペースを空けて見やすくする */
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid var(--border-color); /* メインコンテンツとは違う、控えめな枠線 */
+    background-color: #fcfcfc; /* フォームの背景は少し白くして目立たせる */
+}
+
+/* ======================================= */
+/* ラベル（見出し）のスタイリング */
+/* ======================================= */
+main form label {
+    font-weight: 600; /* 太字で目立たせる */
+    color: #444444; /* 濃いグレー */
+    margin-bottom: 5px; /* 入力欄との間隔を空ける */
+    display: block; /* 常に新しい行から開始させる */
+}
+
+/* ======================================= */
+/* 入力欄（<input>と<textarea>）のスタイリング */
+/* ======================================= */
+main form input[type="text"],
+main form input[type="email"],
+main form textarea {
+    width: 100%; /* 親要素の幅いっぱいに広げる */
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px; /* 角を少し丸くする */
+    font-size: 1.0em;
+    font-family: inherit; /* bodyのフォントを継承してスタイリッシュに */
+    transition: all 0.3s ease; /* アニメーションで滑らかに */
+}
+
+/* フォーカス（入力中）のスタイリング: 必須！ */
+main form input:focus,
+main form textarea:focus {
+    outline: none; /* デフォルトの青い枠線を消す */
+    border-color: var(--accent-color); /* 入力中にゴールドの枠線が光る！ */
+    box-shadow: 0 0 5px rgba(160, 140, 92, 0.4); /* 控えめなゴールドの影 */
+    background-color: #ffffff;
+}
+
+/* ======================================= */
+/* 送信ボタンのスタイリング */
+/* ======================================= */
+main form button[type="submit"] {
+    background-color: #222222; /* 落ち着いたブラック */
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px 30px;
+    border:
+    
